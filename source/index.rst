@@ -6,9 +6,9 @@
    :Status: First draft
    :Copyright: This document has been placed in the public domain.
 
-=======================
-学习笔记打发sdfsdf
-=======================
+===========
+学习笔记
+===========
 
 .. toctree::
    :maxdepth: 2
