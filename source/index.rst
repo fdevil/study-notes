@@ -15,6 +15,7 @@
    :caption: 目录:
    
    linux-study-notes
+   python-sphinx-restructuredtext-github-readthedocs
    test
 
 
