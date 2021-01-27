@@ -1,5 +1,10 @@
-.. linux-study-notes.rst documentation master file, created by
-   zq on 2021.1.7.
+.. :Author: ZQ
+   :Contact: fdevilpublic@163.com
+   :Revision: 1.0.0
+   :Created Date: 2021-01-07
+   :Modified Date:
+   :Status: First draft
+   :Copyright: This document has been placed in the public domain.
 
 =======================
 Linux学习笔记
@@ -300,14 +305,35 @@ yum list | grep xx xx软件列表
 yum install xxx 下载xxx安装，并安装所有的依赖包
 
 
+* netstat
+* -n或--numeric 直接使用IP地址，而不通过域名服务器
+* -a或--all 显示所有连线中的Socket。
+* -p或--programs 显示正在使用Socket的程序识别码和程序名称。
+
+
+
 * netstat -an | grep ESTABLISHED | awk -F " " '{print $5}' | cut -d ":" -f 1 | sort -nr
+
+清除陷入CLOSE_WAIT的进程
+
+.. code::
+
+    netstat -nap |grep CLOSE_WAIT | grep 32771 | awk '{print $7}'|awk -F"\/" '{print $1}' |awk '!a[$1]++'  | xargs kill  // 不显示进程号
+
+清除陷入CLOSE_WAIT的进程 方法二
+lsof -i:端口号
+kill -9 进程号
+
+
+
+
 
 
 * top // 查看内存
 * iotop // 查看io读写
 * df -lh // 查看磁盘存储
 * netstat -tunlp // 查看端口占用
-* lsof -i // 查端口占用
+* lsof -i:端口号 // 查端口占用
 * ps -aux | grep xx进程 // 查看关心的xx进程
 
 

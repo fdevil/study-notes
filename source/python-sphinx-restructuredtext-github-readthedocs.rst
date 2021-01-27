@@ -85,6 +85,8 @@ ReadTheDocs部署文档
 ReadTheDocs自动配置文档
 ------------------------
 
+readthedocs 增加项目的项目名称可以顺便设置，只要不和readthedocs大家
+
 ReadTheDocs手动配置文档
 ------------------------
 

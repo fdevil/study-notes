@@ -9,13 +9,17 @@
 ===========
 学习笔记
 ===========
+:Created Date: 2021-01-26
+:Modified Date: 2021-01-27
 
 .. toctree::
-   :maxdepth: 2
+   :maxdepth: 1
    :caption: 目录:
    
    linux-study-notes
+   linux-common-commands
    python-sphinx-restructuredtext-github-readthedocs
+   
    test
 
 
